@@ -10,6 +10,14 @@ module.exports = {
         primary: ['Inter', ...fontFamily.sans],
       },
       colors: {
+        ex1: {
+          white: '#FFFFFF',
+          cream: '#F2EAE2',
+          aurometalSaurus: '#6C7289',
+          deepAquamarine: '#3D8168',
+          hoveredDeepAquamarine: '#1A4032',
+          gunmetal: '#1C232B',
+        },
         primary: {
           // Customize it on globals.css :root
           50: 'rgb(var(--tw-color-primary-50) / <alpha-value>)',
