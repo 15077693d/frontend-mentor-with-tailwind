@@ -6,7 +6,17 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      backgroundImage: {
+        'ex1-cartIcon':
+          "url('/images/projects/productPreviewCardComponent/image-product-desktop.jpg')",
+        'ex1-product-desktop':
+          "url('/images/projects/productPreviewCardComponent/image-product-desktop.jpg')",
+        'ex1-product-mobile':
+          "url('/images/projects/productPreviewCardComponent/image-product-mobile.jpg')",
+      },
       fontFamily: {
+        Fraunces: ['Fraunces', ...fontFamily.sans],
+        Montserrat: ['Montserrat', ...fontFamily.sans],
         primary: ['Inter', ...fontFamily.sans],
       },
       colors: {
