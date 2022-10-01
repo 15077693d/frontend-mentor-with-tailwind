@@ -9,9 +9,7 @@ export function Text({
   className: string;
   type: 'Display' | 'Body' | 'Button Text' | 'Overline';
 }) {
-  const className: {
-    [id in string]: string;
-  } = {
+  const className = {
     ['Display']: 'font-Fraunces font-bold text-[32px] leading-[32px]',
     ['Body']: 'font-Montserrat font-medium text-[14px] leading-[23px]',
     ['Button Text']: 'font-Montserrat font-bold text-[14px]',
