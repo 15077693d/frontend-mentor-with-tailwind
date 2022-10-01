@@ -59,7 +59,7 @@ export default function ExercisesPage() {
                   alt='productPreviewCardComponent summary'
                   width={288 * 2.5}
                   height={160 * 2.5}
-                  src='/images/projects/productPreviewCardComponent/project-summary.png'
+                  src='/images/projects/ex1/project-summary.png'
                 />
                 <p className={clsx('!mt-1 text-sm', textColor)}>
                   This is my first and most inspiring experience with the
@@ -69,7 +69,7 @@ export default function ExercisesPage() {
                   development.
                 </p>
                 <div className='space-x-2'>
-                  <PrimaryLink href='/ex1'>My Solution</PrimaryLink>
+                  <PrimaryLink href='/exercises/ex1'>My Solution</PrimaryLink>
                   <PrimaryLink href='https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa'>
                     The Challenge
                   </PrimaryLink>
