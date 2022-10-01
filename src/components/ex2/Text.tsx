@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-export function Text({
+export default function Text({
   children,
   type,
   ...args
@@ -10,9 +10,8 @@ export function Text({
   type: 'Heading' | 'Body';
 }) {
   const className = {
-    ['Heading']: 'font-Outfit font-bold text-[22px]',
-    ['Body']:
-      'font-Outfit font-bold text-[15px] leading-[32px] trackin-[0.19px]',
+    ['Heading']: 'font-Outfit font-bold text-[22px] leading-[30px]',
+    ['Body']: 'font-Outfit font-normal text-[15px]  tracking-[0.19px]',
   };
 
   return (
