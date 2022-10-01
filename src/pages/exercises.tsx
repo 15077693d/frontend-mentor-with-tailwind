@@ -54,8 +54,11 @@ export default function ExercisesPage() {
                   Product preview card component
                 </h2>
                 <p className={clsx('!mt-1 text-sm', textColor)}>
-                  This is my first experience with tailwind, I choose a simple
-                  one for practice.
+                  This is my first and most inspiring experience with the
+                  tailwind, I choose a simple one for practice. This is fun to
+                  learn tailwind config and remember many tailwind CSS
+                  properties. It is convenient and speeds me up on the frontend
+                  development.
                 </p>
                 <div className='space-x-2'>
                   <PrimaryLink href='/ex1'>My Solution</PrimaryLink>
