@@ -1,5 +1,6 @@
 // !STARTERCONF You can delete this page
 import clsx from 'clsx';
+import Image from 'next/image';
 import * as React from 'react';
 
 import Button from '@/components/main/buttons/Button';
@@ -50,9 +51,16 @@ export default function ExercisesPage() {
 
             <ol className='mt-8 space-y-6'>
               <li className='space-y-2'>
-                <h2 className='text-lg md:text-xl'>
+                <h2 className='mb-2 text-lg md:text-xl'>
                   Product preview card component
                 </h2>
+                <Image
+                  layout='intrinsic'
+                  alt='productPreviewCardComponent summary'
+                  width={288 * 2.5}
+                  height={160 * 2.5}
+                  src='/images/projects/productPreviewCardComponent/project-summary.png'
+                />
                 <p className={clsx('!mt-1 text-sm', textColor)}>
                   This is my first and most inspiring experience with the
                   tailwind, I choose a simple one for practice. This is fun to
