@@ -7,19 +7,27 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'ex1-cartIcon':
-          "url('/images/projects/productPreviewCardComponent/image-product-desktop.jpg')",
+        'ex1-cartIcon': "url('/images/projects/ex1/image-product-desktop.jpg')",
         'ex1-product-desktop':
-          "url('/images/projects/productPreviewCardComponent/image-product-desktop.jpg')",
+          "url('/images/projects/ex1/image-product-desktop.jpg')",
         'ex1-product-mobile':
-          "url('/images/projects/productPreviewCardComponent/image-product-mobile.jpg')",
+          "url('/images/projects/ex1/image-product-mobile.jpg')",
       },
       fontFamily: {
         Fraunces: ['Fraunces', ...fontFamily.sans],
         Montserrat: ['Montserrat', ...fontFamily.sans],
         primary: ['Inter', ...fontFamily.sans],
+        Outfit: ['Outfit', ...fontFamily.sans],
       },
       colors: {
+        ex2: {
+          blue: '#2C7DFA',
+          blueShaded: '#3685FF',
+          darkNavy: '#1F314F',
+          grey: '#7D889E',
+          lightGrey: '#D5E1EF',
+          white: '#FFFFFF',
+        },
         ex1: {
           white: '#FFFFFF',
           cream: '#F2EAE2',

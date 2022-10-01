@@ -35,7 +35,7 @@ export function ProductPreviewCard() {
             width={14}
             height={16}
             alt='icon-cart'
-            src='/images/projects/productPreviewCardComponent/icon-cart.svg'
+            src='/images/projects/ex1/icon-cart.svg'
           />
           <Text type='Button Text' className='m-2 text-ex1-white'>
             Add to Cart
