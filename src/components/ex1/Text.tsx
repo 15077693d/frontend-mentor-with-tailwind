@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import clsx from 'clsx';
 
 export function Text({
   children,
@@ -27,7 +27,5 @@ export function Text({
     default:
       break;
   }
-  return (
-    <div className={classNames(className, args.className)}>{children}</div>
-  );
+  return <div className={clsx(className, args.className)}>{children}</div>;
 }
