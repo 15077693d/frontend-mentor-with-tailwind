@@ -1,11 +1,10 @@
-import Image from 'next/image';
 import * as React from 'react';
 
-import Layout from '@/components/layout/Layout';
-import ArrowLink from '@/components/links/ArrowLink';
-import ButtonLink from '@/components/links/ButtonLink';
-import UnderlineLink from '@/components/links/UnderlineLink';
-import Seo from '@/components/Seo';
+import Layout from '@/components/main/layout/Layout';
+import ArrowLink from '@/components/main/links/ArrowLink';
+import ButtonLink from '@/components/main/links/ButtonLink';
+import UnderlineLink from '@/components/main/links/UnderlineLink';
+import Seo from '@/components/main/Seo';
 
 // !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
 // Before you begin editing, follow all comments with `STARTERCONF`,
@@ -20,7 +19,14 @@ export default function HomePage() {
       <main>
         <section className='bg-white'>
           <div className='layout flex min-h-screen flex-col items-center justify-center text-center'>
-            <Image src='/images/logo.png' width='100' height='100' alt='logo' />
+            {/* eslint-disable  @next/next/no-img-element */}
+            <img
+              className=' translate-x-7'
+              src='/images/logo.png'
+              width={84 * 2.5}
+              height={51 * 2.5}
+              alt='logo'
+            />
             <h1 className='mt-4'>Frontend Mentor with Tailwind CSS</h1>
             <p className='mt-2 text-sm text-gray-800'>
               A frontend mentor exercises collection in Tailwind CSS

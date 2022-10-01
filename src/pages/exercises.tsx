@@ -2,11 +2,11 @@
 import clsx from 'clsx';
 import * as React from 'react';
 
-import Button from '@/components/buttons/Button';
-import Layout from '@/components/layout/Layout';
-import ArrowLink from '@/components/links/ArrowLink';
-import PrimaryLink from '@/components/links/PrimaryLink';
-import Seo from '@/components/Seo';
+import Button from '@/components/main/buttons/Button';
+import Layout from '@/components/main/layout/Layout';
+import ArrowLink from '@/components/main/links/ArrowLink';
+import PrimaryLink from '@/components/main/links/PrimaryLink';
+import Seo from '@/components/main/Seo';
 
 export default function ExercisesPage() {
   const [mode, setMode] = React.useState<'dark' | 'light'>('light');
@@ -58,9 +58,7 @@ export default function ExercisesPage() {
                   one for practice.
                 </p>
                 <div className='space-x-2'>
-                  <PrimaryLink href='/productPreviewCardComponent'>
-                    My Solution
-                  </PrimaryLink>
+                  <PrimaryLink href='/ex1'>My Solution</PrimaryLink>
                   <PrimaryLink href='https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa'>
                     The Challenge
                   </PrimaryLink>
