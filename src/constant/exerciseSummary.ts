@@ -1,6 +1,7 @@
 export enum ExerciseId {
   ex1 = 'ex1',
   ex2 = 'ex2',
+  ex3 = 'ex3',
 }
 
 export type ExerciseSummary = {
@@ -14,6 +15,14 @@ export type ExerciseSummary = {
 export const exerciseSummarys: {
   [id in ExerciseId]: ExerciseSummary;
 } = {
+  [ExerciseId.ex3]: {
+    id: ExerciseId.ex3,
+    title: 'Notifications page',
+    imgSrc: `/images/projects/${ExerciseId.ex3}/project-summary.png`,
+    paragraph: '',
+    frontendSrc:
+      'https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC',
+  },
   [ExerciseId.ex1]: {
     id: ExerciseId.ex1,
     title: 'Product Preview Card Component',
