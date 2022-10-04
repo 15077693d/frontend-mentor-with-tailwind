@@ -18,8 +18,20 @@ module.exports = {
         Montserrat: ['Montserrat', ...fontFamily.sans],
         primary: ['Inter', ...fontFamily.sans],
         Outfit: ['Outfit', ...fontFamily.sans],
+        PlusJakartaSans: ['Plus Jakarta Sans', ...fontFamily.sans],
       },
       colors: {
+        ex3: {
+          Blue: '#0A327B',
+          Red: '#F65552',
+          VeryDarkGreyBlue: '#1C202B',
+          DarkGreyBlue: '#5E6778',
+          GreyBlue: '#939CAD',
+          LightGreyBlue: '#E5EFFA',
+          VeryLightGreyBlue: '#DDE7EE',
+          Snow: '#F7FAFD',
+          White: '#FFFFFF',
+        },
         ex2: {
           blue: '#2C7DFA',
           blueShaded: '#3685FF',

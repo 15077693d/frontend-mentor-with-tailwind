@@ -6,7 +6,7 @@ export default function Text({
   ...args
 }: {
   children: React.ReactNode;
-  className: string;
+  className?: string;
   type: 'Heading' | 'Body';
 }) {
   const className = {
