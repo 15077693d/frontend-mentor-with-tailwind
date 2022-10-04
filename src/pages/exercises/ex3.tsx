@@ -1,13 +1,15 @@
 import React from 'react';
 
-import Text from '@/components/ex3/Text';
+import ExerciseLayout from '@/components/common/ExerciseLayout';
+import { Notifications } from '@/components/ex3/Notifications/Notifications';
 
 export default function NotificationPage() {
   return (
-    <>
-      <Text type='Header'>This is Heading</Text>
-      <Text type='BodyBold'>This is BodyBold</Text>
-      <Text type='Body'>This is Body</Text>
-    </>
+    <ExerciseLayout
+      className='flex h-screen w-screen items-center  justify-center  bg-[#F9FAFD]'
+      templateTitle='Notification Page'
+    >
+      <Notifications />
+    </ExerciseLayout>
   );
 }

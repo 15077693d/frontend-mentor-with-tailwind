@@ -5,19 +5,21 @@ export default function Text({
   type,
   ...args
 }: {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
   type: 'Header' | 'BodyBold' | 'Body';
 }) {
   const className = {
-    Header: 'font-PlusJakartaSans font-[800] text-[24px] tracking-[0px] ',
-    BodyBold: 'font-PlusJakartaSans font-[800] text-[16px] tracking-[0px] ',
-    Body: 'font-PlusJakartaSans font-[500] text-[16px] tracking-[0px] ',
+    Header:
+      'font-PlusJakartaSans font-[800] md:text-[24px] tracking-[0px] text-[14px]',
+    BodyBold:
+      'font-PlusJakartaSans font-[800] md:text-[16px] tracking-[0px]  text-[14px]',
+    Body: 'font-PlusJakartaSans font-[500] md:text-[16px] tracking-[0px] text-[14px]',
   };
 
   return (
-    <div className={clsx(className[type] || '', args.className)}>
+    <span className={clsx(className[type] || '', args.className)}>
       {children}
-    </div>
+    </span>
   );
 }

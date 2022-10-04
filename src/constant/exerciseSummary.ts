@@ -19,7 +19,7 @@ export const exerciseSummarys: {
     id: ExerciseId.ex3,
     title: 'Notifications page',
     imgSrc: `/images/projects/${ExerciseId.ex3}/project-summary.png`,
-    paragraph: '',
+    paragraph: 'I tried compound react component in this exercise. :)',
     frontendSrc:
       'https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC',
   },
