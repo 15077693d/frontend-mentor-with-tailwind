@@ -6,7 +6,7 @@ export function Text({
   ...args
 }: {
   children: React.ReactNode;
-  className: string;
+  className?: string;
   type: 'Display' | 'Body' | 'Button Text' | 'Overline';
 }) {
   const className = {

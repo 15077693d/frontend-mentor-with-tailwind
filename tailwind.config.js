@@ -20,6 +20,17 @@ module.exports = {
         Outfit: ['Outfit', ...fontFamily.sans],
       },
       colors: {
+        ex3: {
+          Blue: '#0a327b',
+          Red: '#f65552',
+          VeryDarkGreyBlue: '#1c202b',
+          DarkGreyBlue: '#5e6778',
+          GreyBlue: '#939cad',
+          LightGreyBlue: '#e5effa',
+          VeryLightGreyBlue: '#dde7ee',
+          Snow: '#f7fafd',
+          White: '#ffffff',
+        },
         ex2: {
           blue: '#2C7DFA',
           blueShaded: '#3685FF',

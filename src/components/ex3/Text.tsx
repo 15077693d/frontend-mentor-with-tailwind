@@ -7,11 +7,12 @@ export default function Text({
 }: {
   children: React.ReactNode;
   className?: string;
-  type: 'Heading' | 'Body';
+  type: 'Header' | 'BodyBold' | 'Body';
 }) {
   const className = {
-    ['Heading']: 'font-Outfit font-bold text-[22px] leading-[30px]',
-    ['Body']: 'font-Outfit font-normal text-[15px]  tracking-[0.19px]',
+    Header: 'font-PlusJakartaSans font-[800] text-[24px] tracking-[0px] ',
+    BodyBold: 'font-PlusJakartaSans font-[800] text-[16px] tracking-[0px] ',
+    Body: 'font-PlusJakartaSans font-[500] text-[16px] tracking-[0px] ',
   };
 
   return (
