@@ -4,7 +4,7 @@ import Text from '@/components/ex3/Text';
 export default function Layout({ children }: { children?: React.ReactNode }) {
   const { numberOfUnread, markAllNotificationsAsRead } = useNotification();
   return (
-    <main className='w-[375px] bg-ex3-White py-7 px-5 md:w-[730px] md:rounded-[15px]'>
+    <div className='w-[375px] bg-ex3-White py-7 px-5 md:w-[730px] md:rounded-[15px]'>
       <div className='mb-5 flex items-center justify-between'>
         <div className='flex items-center'>
           <Text className='mr-3 text-[20px]' type='Header'>
@@ -23,6 +23,6 @@ export default function Layout({ children }: { children?: React.ReactNode }) {
         </button>
       </div>
       {children}
-    </main>
+    </div>
   );
 }

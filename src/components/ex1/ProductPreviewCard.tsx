@@ -4,7 +4,7 @@ import { Text } from '@/components/ex1/Text';
 
 export function ProductPreviewCard() {
   return (
-    <main className='h-[611px] w-[343px] rounded-[10px] bg-ex1-white md:flex md:h-[450px] md:w-[600px]'>
+    <div className='h-[611px] w-[343px] rounded-[10px] bg-ex1-white md:flex md:h-[450px] md:w-[600px]'>
       {/* Image section */}
       <section className='w:[50%] h-[40%] rounded-t-[10px] bg-ex1-product-desktop bg-cover bg-right md:h-[100%] md:w-[50%] md:rounded-t-none md:rounded-l-[10px]'></section>
       {/* Product detail section */}
@@ -42,6 +42,6 @@ export function ProductPreviewCard() {
           </Text>
         </button>
       </section>
-    </main>
+    </div>
   );
 }

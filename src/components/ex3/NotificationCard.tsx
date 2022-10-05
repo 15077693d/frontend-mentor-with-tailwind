@@ -34,7 +34,7 @@ function CardText() {
   const objectTextColor =
     action === ActionId.reactPost ? 'DarkGreyBlue' : 'Blue';
   return (
-    <main>
+    <div>
       <Text className='text-ex3-VeryDarkGreyBlue' type='BodyBold'>
         {username}
       </Text>
@@ -55,7 +55,7 @@ function CardText() {
       <Text className='block text-ex3-GreyBlue' type='Body'>
         {time}
       </Text>
-    </main>
+    </div>
   );
 }
 
@@ -110,7 +110,7 @@ export default function NotificationCard({
   const { notificationsData, markNotificationAsRead } = useNotification();
   return (
     <NotificationCardContext.Provider value={notificationsData[id]}>
-      <main
+      <div
         className={clsxm(
           className,
           notificationsData[id].readed ? 'bg-ex3-White' : 'bg-ex3-Snow',
@@ -119,7 +119,7 @@ export default function NotificationCard({
         onClick={() => markNotificationAsRead(id)}
       >
         {children}
-      </main>
+      </div>
     </NotificationCardContext.Provider>
   );
 }

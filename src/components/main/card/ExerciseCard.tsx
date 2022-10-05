@@ -14,7 +14,7 @@ export default function ExerciseCard({
 }) {
   const { title, imgSrc, paragraph } = exerciseSummarys[exerciseId];
   return (
-    <main className='w-[432px] rounded-md shadow-xl'>
+    <div className='w-[432px] rounded-md shadow-xl'>
       <Image
         className='rounded-t-md'
         layout='intrinsic'
@@ -35,6 +35,6 @@ export default function ExerciseCard({
           </PrimaryLink>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

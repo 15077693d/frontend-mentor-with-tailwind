@@ -13,7 +13,7 @@ export default function ExerciseLayout({
   templateTitle: string;
 }) {
   return (
-    <main className={className}>
+    <div className={className}>
       <Seo templateTitle={templateTitle} />
       <ArrowLink
         direction='left'
@@ -23,6 +23,6 @@ export default function ExerciseLayout({
         Back to Exercises
       </ArrowLink>
       {children}
-    </main>
+    </div>
   );
 }

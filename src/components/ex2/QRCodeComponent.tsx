@@ -5,7 +5,7 @@ import Text from '@/components/ex2/Text';
 
 export default function QRCOdeComponent() {
   return (
-    <main className='s h-[497px] w-[320px] rounded-[10px] bg-ex2-white p-[15px] shadow-2xl'>
+    <div className='s h-[497px] w-[320px] rounded-[10px] bg-ex2-white p-[15px] shadow-2xl'>
       <section>
         <Image
           className='rounded-[10px]'
@@ -24,6 +24,6 @@ export default function QRCOdeComponent() {
           to the next level
         </Text>
       </section>
-    </main>
+    </div>
   );
 }
