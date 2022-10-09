@@ -8,7 +8,7 @@ export default function ExerciseLayout({
   className,
   templateTitle,
 }: {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className: string;
   templateTitle: string;
 }) {

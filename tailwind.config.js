@@ -7,6 +7,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
+        'ex4-bgCardFront': "url('/images/projects/ex4/bg-card-front.png')",
+        'ex4-bgCardBack': "url('/images/projects/ex4/bg-card-back.png')",
         'ex1-cartIcon': "url('/images/projects/ex1/image-product-desktop.jpg')",
         'ex1-product-desktop':
           "url('/images/projects/ex1/image-product-desktop.jpg')",
