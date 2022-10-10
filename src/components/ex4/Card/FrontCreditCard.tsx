@@ -1,6 +1,9 @@
+import clsxm from '@/lib/clsxm';
+
 import Text from '@/components/ex4/Text';
 
 type FrontCreditCard = {
+  className?: string;
   cardNumber?: string;
   cardName?: string;
   expMM?: string;
@@ -12,9 +15,15 @@ export function FrontCreditCard({
   cardName = 'JANE APPLESEED',
   expMM = '00',
   expYY = '00',
+  className,
 }: FrontCreditCard) {
   return (
-    <div className='box-border flex h-[157px] w-[286px] flex-col justify-between rounded-[6px] bg-ex4-bgCardFront bg-cover p-[18px]'>
+    <div
+      className={clsxm(
+        'box-border flex flex-col justify-between rounded-[6px] bg-ex4-bgCardFront bg-cover p-[18px] shadow-2xl',
+        className
+      )}
+    >
       {/* eslint-disable  @next/next/no-img-element */}
       <img
         className='w-[20%]'

@@ -17,7 +17,7 @@ export default function ExerciseLayout({
       <Seo templateTitle={templateTitle} />
       <ArrowLink
         direction='left'
-        className='absolute top-2 left-8 mt-8'
+        className='absolute top-2 left-8 z-10 mt-8'
         href='/exercises'
       >
         Back to Exercises

@@ -3,20 +3,26 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 
+import clsxm from '@/lib/clsxm';
+
 import Text from '@/components/ex4/Text';
 
 type InputType = {
+  className?: string;
   placeholder?: string;
   error: {
     flag: boolean;
     message?: string;
   };
   type: 'text' | 'number';
+  id: string;
 };
 export default function Input({
-  placeholder = 'e.g. 1234 5678 9123 0000',
-  error = { flag: false },
+  className,
+  placeholder,
+  error,
   type,
+  id,
 }: InputType) {
   const inputRef = React.useRef(null);
   const [active, setActive] = useState<boolean>(false);
@@ -38,7 +44,7 @@ export default function Input({
     };
   }, []);
   return (
-    <div className='w-[100%]'>
+    <div className={clsxm('w-[100%]', className)}>
       <div
         className={clsx(
           'mb-[5px] w-[100%] rounded-[9px] p-[1.5px]',
@@ -50,9 +56,9 @@ export default function Input({
         )}
       >
         <input
+          id={id}
           ref={inputRef}
           type={type}
-          id='cardholder name'
           className={clsx(
             'w-[100%] rounded-[8px] border-none p-[7px] px-[13px] outline-none',
             'placeholder-ex4-DeepViolet placeholder-opacity-25'
