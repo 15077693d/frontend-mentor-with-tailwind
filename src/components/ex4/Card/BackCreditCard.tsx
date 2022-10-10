@@ -17,7 +17,7 @@ export default function BackCreditCard({
       )}
     >
       <Text
-        className='absolute right-[8%] top-[43%] text-ex4-White'
+        className='absolute right-[8%] top-[43%] text-ex4-White lg:right-[12%] lg:top-[44%]'
         type='BodyL'
       >
         {cvc}

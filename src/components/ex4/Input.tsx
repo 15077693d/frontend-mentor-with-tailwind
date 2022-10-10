@@ -1,69 +1,70 @@
 import clsx from 'clsx';
 import React from 'react';
-import { useEffect } from 'react';
 import { useState } from 'react';
+import { UseFormRegisterReturn } from 'react-hook-form';
 
 import clsxm from '@/lib/clsxm';
 
 import Text from '@/components/ex4/Text';
 
 type InputType = {
+  matchRegexRule?: RegExp;
+  valueTransform?: (value: string) => string;
+  maxLength?: number;
+  useFormMethods: UseFormRegisterReturn;
   className?: string;
   placeholder?: string;
   error: {
     flag: boolean;
     message?: string;
   };
-  type: 'text' | 'number';
   id: string;
 };
 export default function Input({
   className,
   placeholder,
   error,
-  type,
   id,
+  useFormMethods,
+  maxLength,
+  matchRegexRule,
+  valueTransform,
 }: InputType) {
-  const inputRef = React.useRef(null);
-  const [active, setActive] = useState<boolean>(false);
-  useEffect(() => {
-    const updateInputRefIsActive = () => {
-      if (typeof window !== 'undefined') {
-        setActive(inputRef.current === document.activeElement);
-      }
-    };
-    const unsetInputRefIsActive = () => {
-      setActive(false);
-    };
-    window.addEventListener('focusout', unsetInputRefIsActive);
-    window.addEventListener('focusin', updateInputRefIsActive);
-
-    return () => {
-      window.removeEventListener('focusin', updateInputRefIsActive);
-      window.removeEventListener('focusout', unsetInputRefIsActive);
-    };
-  }, []);
+  const [inputValue, setInputValue] = useState('');
   return (
     <div className={clsxm('w-[100%]', className)}>
       <div
         className={clsx(
-          'mb-[5px] w-[100%] rounded-[9px] p-[1.5px]',
-          !active && !error.flag && 'bg-ex4-LightGrey',
-          active &&
-            !error.flag &&
-            'bg-gradient-to-r from-[#6348FE] to-[#610595]',
+          'mb-[5px] w-[100%] rounded-[9px] p-[1.8px]',
+          !error.flag && 'bg-ex4-LightGrey',
+          'from-[#6348FE] to-[#610595] focus-within:bg-gradient-to-r',
           error.flag && 'bg-ex4-Red'
         )}
       >
         <input
+          value={inputValue}
+          onKeyPress={(e) => {
+            if (matchRegexRule && !matchRegexRule.test(e.key)) {
+              e.preventDefault();
+            }
+          }}
+          {...useFormMethods}
+          onChange={(e) => {
+            useFormMethods.onChange(e);
+            if (valueTransform) {
+              setInputValue(valueTransform(e.target.value));
+            } else {
+              setInputValue(e.target.value);
+            }
+          }}
           id={id}
-          ref={inputRef}
-          type={type}
+          type='text'
           className={clsx(
-            'w-[100%] rounded-[8px] border-none p-[7px] px-[13px] outline-none',
+            'w-[100%] rounded-[8px] border-none p-[7px] px-[13px] outline-none focus:ring-0',
             'placeholder-ex4-DeepViolet placeholder-opacity-25'
           )}
           placeholder={placeholder}
+          maxLength={maxLength}
         />
       </div>
       <Text type='BodyS' className='text-ex4-Red'>

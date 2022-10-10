@@ -5,16 +5,16 @@ import Text from '@/components/ex4/Text';
 type FrontCreditCard = {
   className?: string;
   cardNumber?: string;
-  cardName?: string;
-  expMM?: string;
-  expYY?: string;
+  cardholderName?: string;
+  expDataMm?: string;
+  expDataYy?: string;
 };
 
 export function FrontCreditCard({
   cardNumber = '0000 0000 0000 0000',
-  cardName = 'JANE APPLESEED',
-  expMM = '00',
-  expYY = '00',
+  cardholderName = 'JANE APPLESEED',
+  expDataMm = '00',
+  expDataYy = '00',
   className,
 }: FrontCreditCard) {
   return (
@@ -35,13 +35,13 @@ export function FrontCreditCard({
           {cardNumber}
         </div>
         <div className='flex justify-between'>
-          <Text className='text-ex4-White' type='BodyL'>
-            {cardName}
+          <Text className='uppercase text-ex4-White' type='BodyL'>
+            {cardholderName}
           </Text>
           <Text
             className='text-ex4-White'
             type='BodyL'
-          >{`${expMM}/${expYY}`}</Text>
+          >{`${expDataMm}/${expDataYy}`}</Text>
         </div>
       </div>
     </div>
