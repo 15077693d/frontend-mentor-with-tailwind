@@ -1,6 +1,6 @@
 import clsxm from '@/lib/clsxm';
 
-import BaseButton from '@/components/ex4/Button';
+import Button from '@/components/ex4/Button';
 import Input from '@/components/ex4/Input';
 import Label from '@/components/ex4/Label';
 
@@ -77,7 +77,7 @@ export default function Form() {
           />
         </div>
       </div>
-      <BaseButton>Confirm</BaseButton>
+      <Button>Confirm</Button>
     </div>
   );
 }

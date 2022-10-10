@@ -4,7 +4,7 @@ import clsxm from '@/lib/clsxm';
 
 import Text from '@/components/ex4/Text';
 
-export default function BaseButton({ children }: { children?: ReactNode }) {
+export default function Button({ children }: { children?: ReactNode }) {
   return (
     <button
       className={clsxm(
