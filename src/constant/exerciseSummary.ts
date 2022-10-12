@@ -2,6 +2,7 @@ export enum ExerciseId {
   ex1 = 'ex1',
   ex2 = 'ex2',
   ex3 = 'ex3',
+  ex4 = 'ex4',
 }
 
 export type ExerciseSummary = {
@@ -15,6 +16,15 @@ export type ExerciseSummary = {
 export const exerciseSummarys: {
   [id in ExerciseId]: ExerciseSummary;
 } = {
+  [ExerciseId.ex4]: {
+    id: ExerciseId.ex4,
+    title: 'Interactive Card Details Form',
+    imgSrc: `/images/projects/${ExerciseId.ex4}/project-summary.png`,
+    paragraph:
+      'I never thought that a form is such hard to implement. Some minor requirements are tuoblesome such as card number input. It needs a space character after each 4 digits. Gradient color border, user input restrirction are also new thing I learnt in this exercise. Amazing!!!!! Feel free hack the form and tell me the bug XD.',
+    frontendSrc:
+      'https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw',
+  },
   [ExerciseId.ex3]: {
     id: ExerciseId.ex3,
     title: 'Notifications page',

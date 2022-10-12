@@ -7,6 +7,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
+        'ex4-bgMainMobile': "url('/images/projects/ex4/bg-main-desktop.png')",
+        'ex4-bgMainDesktop': "url('/images/projects/ex4/bg-main-mobile.png')",
+        'ex4-bgCardFront': "url('/images/projects/ex4/bg-card-front.png')",
+        'ex4-bgCardBack': "url('/images/projects/ex4/bg-card-back.png')",
         'ex1-cartIcon': "url('/images/projects/ex1/image-product-desktop.jpg')",
         'ex1-product-desktop':
           "url('/images/projects/ex1/image-product-desktop.jpg')",
@@ -14,6 +18,7 @@ module.exports = {
           "url('/images/projects/ex1/image-product-mobile.jpg')",
       },
       fontFamily: {
+        SpaceGrotesk: ['Space Grotesk', ...fontFamily.sans],
         Fraunces: ['Fraunces', ...fontFamily.sans],
         Montserrat: ['Montserrat', ...fontFamily.sans],
         primary: ['Inter', ...fontFamily.sans],
@@ -21,6 +26,13 @@ module.exports = {
         PlusJakartaSans: ['Plus Jakarta Sans', ...fontFamily.sans],
       },
       colors: {
+        ex4: {
+          DeepViolet: '#21092F',
+          PurplishGrey: '#8F8694',
+          LightGrey: '#DFDEE0',
+          White: '#FFFFFF',
+          Red: '#FF5050',
+        },
         ex3: {
           Blue: '#0A327B',
           Red: '#F65552',
