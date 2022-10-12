@@ -7,9 +7,9 @@ export const schema = yup.object().shape({
     .required('Can’t be blank'),
   cardNumber: yup
     .string()
-    .transform((val) => val.replaceAll(' ', ''))
     .required('Can’t be blank')
-    .min(16, 'Wrong format, 16 digits required'),
+    // digits + empty space
+    .min(19, 'Wrong format, 16 digits required'),
   expDataMm: yup
     .string()
     .required('Can’t be blank')

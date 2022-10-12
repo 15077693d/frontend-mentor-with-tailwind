@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { useFormContext } from 'react-hook-form';
 
@@ -8,12 +9,18 @@ import Input from '@/components/ex4/Input';
 import Label from '@/components/ex4/Label';
 
 export default function Form() {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useFormContext();
-  const onSubmit = handleSubmit((data) => data);
+  const onSubmit = handleSubmit((data) => {
+    router.push(
+      { pathname: '/exercises/ex4/thankyou', query: data },
+      '/exercises/ex4/thankyou'
+    );
+  });
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.key === 'Enter') {
@@ -52,7 +59,8 @@ export default function Form() {
           valueTransform={(value) => {
             if (
               value.replaceAll(' ', '').length % 4 === 0 &&
-              value.length !== 0
+              value.length !== 0 &&
+              value.replaceAll(' ', '').length !== 16
             ) {
               return value + ' ';
             }

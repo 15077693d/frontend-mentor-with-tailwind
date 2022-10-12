@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router';
+
 import clsxm from '@/lib/clsxm';
 
 import ExerciseLayout from '@/components/common/ExerciseLayout';
@@ -6,6 +8,7 @@ import { FrontCreditCard } from '@/components/ex4/Card/FrontCreditCard';
 import ThankYouCard from '@/components/ex4/Card/ThankYouCard';
 
 export default function InteractiveCardThankYouCard() {
+  const { query } = useRouter();
   return (
     <ExerciseLayout
       className={clsxm(
@@ -27,12 +30,14 @@ export default function InteractiveCardThankYouCard() {
         )}
       >
         <BackCreditCard
+          {...query}
           className={clsxm(
             'absolute right-0 top-0 h-[157px] w-[268px]',
             'lg:top-[unset] lg:bottom-0 lg:h-[245px] lg:w-[447px]'
           )}
         />
         <FrontCreditCard
+          {...query}
           className={clsxm(
             'absolute left-0 bottom-0 h-[157px] w-[286px]',
             'lg:bottom-[unset] lg:top-0 lg:h-[245px] lg:w-[447px]'

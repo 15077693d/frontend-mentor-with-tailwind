@@ -6,8 +6,9 @@ import clsxm from '@/lib/clsxm';
 import ExerciseLayout from '@/components/common/ExerciseLayout';
 import BackCreditCard from '@/components/ex4/Card/BackCreditCard';
 import { FrontCreditCard } from '@/components/ex4/Card/FrontCreditCard';
-import { schema } from '@/components/ex4/constants';
 import Form from '@/components/ex4/Form';
+
+import { schema } from '@/constant/exercises/ex4';
 
 export default function InteractiveCardDetailsForm() {
   const useFormMethods = useForm({

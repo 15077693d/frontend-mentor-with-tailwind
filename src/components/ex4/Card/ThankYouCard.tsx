@@ -1,9 +1,26 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { useCallback, useEffect } from 'react';
 
 import Button from '@/components/ex4/Button';
 import Text from '@/components/ex4/Text';
 
 export default function ThankYouCard() {
+  const router = useRouter();
+  const onSubmit = useCallback(() => {
+    router.push('/exercises/ex4');
+  }, [router]);
+  useEffect(() => {
+    const handleEnter = (e: KeyboardEvent) => {
+      if (e.key === 'Enter') {
+        onSubmit();
+      }
+    };
+    document.addEventListener('keypress', handleEnter);
+    return () => {
+      document.removeEventListener('keypress', handleEnter);
+    };
+  }, [onSubmit]);
   return (
     <div className='flex h-[291px] w-[327px] flex-col items-center justify-between lg:w-[381px]'>
       <Image
@@ -24,7 +41,7 @@ export default function ThankYouCard() {
         </Text>
       </div>
 
-      <Button onClick={undefined}>Continue</Button>
+      <Button onClick={onSubmit}>Continue</Button>
     </div>
   );
 }
