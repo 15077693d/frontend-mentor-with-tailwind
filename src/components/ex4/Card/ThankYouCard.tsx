@@ -1,14 +1,9 @@
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 
 import Button from '@/components/ex4/Button';
 import Text from '@/components/ex4/Text';
 
 export default function ThankYouCard() {
-  const router = useRouter();
-  const handleClick = () => {
-    router.push({ pathname: '/exercises/ex4/' });
-  };
   return (
     <div className='flex h-[291px] w-[327px] flex-col items-center justify-between lg:w-[381px]'>
       <Image
@@ -29,7 +24,7 @@ export default function ThankYouCard() {
         </Text>
       </div>
 
-      <Button onClick={handleClick}>Continue</Button>
+      <Button onClick={undefined}>Continue</Button>
     </div>
   );
 }
