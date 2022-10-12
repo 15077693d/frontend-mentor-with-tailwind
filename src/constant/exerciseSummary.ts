@@ -21,7 +21,7 @@ export const exerciseSummarys: {
     title: 'Interactive Card Details Form',
     imgSrc: `/images/projects/${ExerciseId.ex4}/project-summary.png`,
     paragraph:
-      'I never thought that a form is such hard to implement. Some minor requirements are tuoblesome such as card number input. It needs a space character after each 4 digits. Gradient color border, user input restrirction are also new thing I learnt in this exercise. Amazing!!!!! Feel free hack the form and tell me the bug XD.',
+      'I never thought that a form was such hard to implement. Some minor requirements are troublesome such as card number input. It needs a space character after every 4 digits. Gradient color border, and user input restriction are also new things I learned in this exercise. Amazing!!!!! Feel free to hack the form and tell me the bug XD.',
     frontendSrc:
       'https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw',
   },
