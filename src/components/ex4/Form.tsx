@@ -82,13 +82,17 @@ export default function Form() {
           <Label htmlFor='exp-data'>Exp. Date (MM/YY)</Label>
           <div className='flex justify-between'>
             <span className='inline-flex w-[48%]'>
+              {/* Can't be blank message only at first box */}
               <Input
                 matchRegexRule={new RegExp(/[0-9]/)}
                 maxLength={2}
                 useFormMethods={register('expDataMm')}
                 error={{
                   flag: !!errors.expDataMm,
-                  message: (errors.expDataMm?.message as string) || '',
+                  message:
+                    (errors.expDataMm?.message as string) ||
+                    (errors.expDataYy?.message as string) ||
+                    '',
                 }}
                 placeholder='MM'
                 id='exp-data-mm'
@@ -101,7 +105,6 @@ export default function Form() {
                 useFormMethods={register('expDataYy')}
                 error={{
                   flag: !!errors.expDataYy,
-                  message: (errors.expDataYy?.message as string) || '',
                 }}
                 placeholder='YY'
                 id='exp-data-yy'
