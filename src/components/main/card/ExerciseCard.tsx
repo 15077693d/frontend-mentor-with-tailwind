@@ -14,7 +14,7 @@ export default function ExerciseCard({
 }) {
   const { title, imgSrc, paragraph } = exerciseSummarys[exerciseId];
   return (
-    <div className='w-[432px] rounded-md shadow-xl'>
+    <div className='w-[26rem] rounded-lg border-2 border-solid border-gray-400 border-opacity-20 shadow-xl'>
       <Image
         className='rounded-t-md'
         layout='intrinsic'
